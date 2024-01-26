@@ -1,0 +1,30 @@
+<ion-content
+  *ngIf="displayedMovies.length "
+  class="movie-content"
+  [fullscreen]="true"
+>
+  <ion-grid>
+    <ion-row class="movie-row">
+      <app-custom-sort-buttons
+        [isSortedByYearAsc]="isSortedByYearAsc"
+        [isSortedByTitleAsc]="isSortedByTitleAsc"
+        (sortByYear)="sortByYear()"
+        (sortByTitle)="sortByTitle()"
+      ></app-custom-sort-buttons>
+      <ion-col
+        class="movie-col"
+        size="6"
+        size-md="6"
+        size-lg="4"
+        *ngFor="let movie of displayedMovies"
+      >
+        <app-custom-card [item]="movie"></app-custom-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

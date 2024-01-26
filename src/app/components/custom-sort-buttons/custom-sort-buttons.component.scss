@@ -1,0 +1,12 @@
+.sort-icons {
+  position: fixed;
+  background: var(--custom-color-light-2);
+  color: var(--custom-color-dark-2);
+  top: 90px;
+  left: 20px;
+  border-radius: 10px;
+}
+
+.no-ripple {
+  --ripple-color: transparent;
+}

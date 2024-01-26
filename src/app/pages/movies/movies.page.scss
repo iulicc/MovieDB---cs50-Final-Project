@@ -1,0 +1,12 @@
+.movie-content {
+  --background: var(--custom-color-medium-2);
+}
+
+.movie-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-row {
+  margin-top: 120px;
+}

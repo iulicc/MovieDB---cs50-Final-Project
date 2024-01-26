@@ -1,0 +1,20 @@
+<div class="header-container">
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start" *ngIf="shouldShowBackButton()">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <h2>MovieDB</h2>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/find" class="no-ripple">
+        <ion-icon name="search"> </ion-icon>
+      </ion-button>
+      <ion-button (click)="toggleDarkMode()" class="no-ripple">
+        <ion-icon name="moon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>

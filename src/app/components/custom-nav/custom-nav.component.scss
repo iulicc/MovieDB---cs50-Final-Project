@@ -1,0 +1,26 @@
+.no-ripple {
+  --ripple-color: transparent;
+}
+
+.active-link {
+  color: var(--custom-color-primary-1);
+  font-weight: bold;
+}
+
+.custom-nav {
+  position: relative;
+  background: var(--custom-color-light-3);
+  color: var(--custom-color-dark-2);
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0px 2px 1px #8888882d, 0px -1px 3px #8888882d;
+
+  ion-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}

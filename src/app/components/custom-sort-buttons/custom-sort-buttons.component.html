@@ -1,0 +1,22 @@
+<ion-buttons class="sort-icons">
+  <ion-button (click)="onSortByYear()" class="no-ripple">
+    Sort by Year
+    <ion-icon
+      *ngIf="isSortedByYearAsc; else arrowDown"
+      name="arrow-up-outline"
+    ></ion-icon>
+    <ng-template #arrowDown
+      ><ion-icon name="arrow-down-outline"></ion-icon
+    ></ng-template>
+  </ion-button>
+  <ion-button (click)="onSortByTitle()" class="no-ripple">
+    Sort by Title
+    <ion-icon
+      *ngIf="isSortedByTitleAsc; else arrowDownTitle"
+      name="arrow-up-outline"
+    ></ion-icon>
+    <ng-template #arrowDownTitle
+      ><ion-icon name="arrow-down-outline"></ion-icon
+    ></ng-template>
+  </ion-button>
+</ion-buttons>

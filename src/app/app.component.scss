@@ -1,0 +1,22 @@
+.active-link {
+  color: var(--custom-color-primary-1);
+  position: relative;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--custom-color-primary-1);
+}
+
+.no-ripple {
+  --ripple-color: transparent;
+}
+
+ion-content {
+  --background: var(--custom-color-medium-2);
+}

@@ -1,0 +1,25 @@
+.no-ripple {
+  --ripple-color: transparent;
+  &:active {
+    color: var(--custom-color-primary-1);
+  }
+}
+
+.custom-toolbar {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --background: var(--custom-color-light-3);
+  border-radius: 16px;
+  color: var(--custom-color-dark-2);
+
+  ion-icon:active {
+    color: blue;
+  }
+}
+
+.header-container {
+  padding: 1rem;
+
+  h2 {
+    margin-bottom: 15px;
+  }
+}

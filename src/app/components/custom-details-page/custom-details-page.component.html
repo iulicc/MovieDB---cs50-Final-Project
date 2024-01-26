@@ -1,0 +1,58 @@
+<div *ngIf="item" class="item-details-container scrollable">
+  <div class="item-details-header">
+    <div class="header-content">
+      <ion-card class="item-poster">
+        <img [src]="item.Poster" alt="{{ item.Title }} Poster" />
+      </ion-card>
+      <div class="item-details-title">
+        <span class="title">{{ item.Title }}</span>
+        <span class="subtitle"
+          >Directed by: <span>{{ item.Director }}</span>
+        </span>
+        <span class="subtitle"
+          >Genre: <span>{{ item.Genre }}</span></span
+        >
+        <span class="subtitle"
+          >Length: <span>{{ item.Runtime }}</span></span
+        >
+        <span class="subtitle">
+          Released in: <span>{{ item.Year }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-details-body">
+    <div class="ratings-container">
+      <div *ngFor="let rating of item.Ratings" class="rating">
+        <span class="value">{{ rating.Value }}</span>
+        <span class="source">{{ rating.Source }}</span>
+      </div>
+    </div>
+
+    <div class="cast-container">
+      <span class="title"
+        >Cast: <span class="cast">{{ item.Actors }}</span></span
+      >
+    </div>
+    <hr class="divider" />
+    <div class="plot-container">
+      <span class="title">Storyline:</span>
+      <span class="plot">{{ item.Plot }}</span>
+    </div>
+    <hr class="divider" />
+
+    <div class="other-info-container">
+      <span class="title">Other Information:</span>
+      <span class="subtitle"
+        >Awards: <span>{{ item.Awards }}</span></span
+      >
+      <span class="subtitle"
+        >Box Office: <span>{{ item.BoxOffice }}</span></span
+      >
+      <span class="subtitle"
+        >Writer: <span>{{ item.Writer }}</span></span
+      >
+    </div>
+  </div>
+</div>

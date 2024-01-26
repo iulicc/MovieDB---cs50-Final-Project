@@ -1,0 +1,27 @@
+<ion-header class="search-header">
+  <ion-searchbar
+    class="custom-searchbar"
+    [(ngModel)]="searchTerm"
+    (ionChange)="searchMovies()"
+    (ionClear)="clearSearchResults()"
+    placeholder="Enter movie/tv show.."
+  ></ion-searchbar>
+</ion-header>
+
+<ion-content class="search-content">
+  <div
+    *ngFor="let result of search"
+    [routerLink]="[result.imdbID]"
+    class="search-result"
+  >
+    <ion-avatar>
+      <img [src]="result.Poster" alt="poster" />
+    </ion-avatar>
+    <span class="title">{{ result.Title }}</span>
+    <span class="year">{{result.Year}}</span>
+  </div>
+
+  <h2 class="error" *ngIf="noResultsFound">
+    Sorry, we could not find any result that includes '{{searchTerm}}'
+  </h2>
+</ion-content>
