@@ -11,6 +11,9 @@
 - To build the app in production mode type: `ng build --configuration production`
 - Open the app in android studio: `ionic capacitor open android`
 
+## :movie_camera: Showcase Video
+https://www.youtube.com/watch?v=K8pgJG5Hl1I
+
 ## :camera: Screenshots
 
 ![Screenshot Description](https://i.ibb.co/0r6Tzj0/Screenshot-2023-05-31-101512.png)
